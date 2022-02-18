@@ -13,7 +13,7 @@ composer require psp-sdk/psp-sdk-php
 ```
 
 - If you are not using composer, download the latest release from [the releases section](https://github.com/aniljmk/psp-sdk-php/releases).
-    **You should download the `omnipay-php.zip` file**.
+    **You should download the `psp-sdk-php-master.zip` file**.
     After that, include `Omnipay.php` in your application and you can use the API as usual.
     
 ##Note:
