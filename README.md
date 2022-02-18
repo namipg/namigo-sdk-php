@@ -9,10 +9,10 @@
 -   If your project using composer, run the below command
 
 ```
-composer require omni-psp/omni-pay
+composer require psp-sdk/psp-sdk-php
 ```
 
-- If you are not using composer, download the latest release from [the releases section](https://github.com/dharmwdp/omnipay-php/releases).
+- If you are not using composer, download the latest release from [the releases section](https://github.com/aniljmk/psp-sdk-php/releases).
     **You should download the `omnipay-php.zip` file**.
     After that, include `Omnipay.php` in your application and you can use the API as usual.
     
