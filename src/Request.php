@@ -55,7 +55,7 @@ class Request
         $headers = $this->getRequestHeaders();
 
         $response = Requests::request($url, $headers, $data, $method, $options);  
-        $this->checkErrors($response);
+        //$this->checkErrors($response);
 
         return json_decode($response->body, true);
     }
