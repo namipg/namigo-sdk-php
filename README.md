@@ -46,7 +46,7 @@ The resources can be accessed via the `$api` object. All the methods invocations
     //This is for encrypt decrypt before call API
     //Create Payment
     $paymentParm = array('customer' =>array('name'=>'Raj', 'email'=>'raj2022@example.com') ,'order'=>array('amount'=>'1', 'currency' => 'SAR'),'sourceOfFunds' => array('provided'=>array('card'=>array('number'=>'5123450000000008','expiry'=>array('month'=>'12','year'=>'2023'), 'cvv'=>'999')), 'cardType' => 'C'), 'remark'=>array('description'=>'This payment is done by card'));
-    $api->encryptdecrypt->create($paymentParm, $secret_key, 'encrypt');
+    $api->encryptDecrypt->create($paymentParm, $secret_key, 'encrypt');
     // Payment API
     //Alwase send $param['trandata'] in encrypted string
     $param['trandata'] = $encripted_result['content']['apiResponse'];
@@ -54,7 +54,7 @@ The resources can be accessed via the `$api` object. All the methods invocations
     
     //Refund Transaction
     $refundParm = array('transaction' =>array('id'=>'nt8my581z620365207292e','amount'=>'1', 'currency' => 'SAR'), 'remark'=>array('description'=>'Refund transaction'));
-    $encripted_result = $api->encryptdecrypt->create($refundParm, $secret_key, 'encrypt');
+    $encripted_result = $api->encryptDecrypt->create($refundParm, $secret_key, 'encrypt');
     $param['trandata'] = $encripted_result['content']['apiResponse'];
     $result = $api->payment->refund($param);
     
@@ -67,7 +67,7 @@ The resources can be accessed via the `$api` object. All the methods invocations
 
     //subscription
     $parms = array('customer' =>array('name'=>'Raj','email'=>'raj2022@example.com', 'interval'=>'1','interval_type'=>'3','interval_count'=>''),'order'=>array('amount'=>'1','currency' => 'SAR'),'sourceOfFunds' => array('provided'=>array('card'=>array('number'=>'5123450000000008','expiry'=>array('month'=>'12','year'=>'2023'), 'cvv'=>'999')),'cardType' => 'C'));
-    $encripted_result = $api->encryptdecrypt->create($parms, $secret_key, 'encrypt');
+    $encripted_result = $api->encryptDecrypt->create($parms, $secret_key, 'encrypt');
     $param['trandata'] = $encripted_result['content']['apiResponse'];
     if(!empty($encripted_result['content']['apiResponse']) && $encripted_result['code'] == 200){
         $result = $api->payment->subscription($param);
