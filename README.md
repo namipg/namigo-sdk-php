@@ -51,6 +51,11 @@ The resources can be accessed via the `$api` object. All the methods invocations
     //Alwase send $param['trandata'] in encrypted string
     $param['trandata'] = $encripted_result['content']['apiResponse'];
     $result = $api->payment->createPayment($param);
+
+    //If you want to use our checkout page please follow these instructions
+    //Create Payment
+    $paymentParm = array('customer_name'=>'Raj', 'customer_email'=>'raj2022@example.com', 'amount'=>'100', 'currency'=>'SAR', 'remark'=>'This payment is done by card');
+    $checkout = $api->payment->checkout($paymentParm);
     
     //Refund Transaction
     $refundParm = array('transaction' =>array('id'=>'nt8my581z620365207292e','amount'=>'1', 'currency' => 'SAR'), 'remark'=>array('description'=>'Refund transaction'));
