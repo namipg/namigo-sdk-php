@@ -118,4 +118,16 @@ class Payment extends Entity
         return $this->request('GET', $relativeUrl);
     }
 
+    /**
+     * payment create
+     *
+     * @param string $encrypted string
+     */
+    public function stcPay($string = array())
+    {
+        $relativeUrl = $this->getEntityUrl(). 'stcPay';
+
+        return $this->request('PUT', $relativeUrl, $string);
+    }
+
 }

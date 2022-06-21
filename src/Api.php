@@ -5,8 +5,12 @@ namespace Omnipay\Api;
 class Api
 {
     protected static $baseUrl = 'https://psp.digitalworld.com.sa/api/v1/';
-    //protected static $baseUrl = 'http://localhost/psp/api/v1/';
+    //protected static $baseUrl = 'http://localhost/psp/dev/api/v1/';
+    //protected static $baseUrl = 'https://test.digitalworld.com.sa/api/v1/';
+    //protected static $baseUrl = 'http://localhost/psp/beta/api/v1/';
     protected static $checkoutUrl = 'https://psp.digitalworld.com.sa/';
+    //protected static $checkoutUrl = 'https://test.digitalworld.com.sa/';
+    //protected static $checkoutUrl = 'http://localhost/psp/dev/';
 
     protected static $key = null;
 
