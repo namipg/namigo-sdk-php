@@ -52,6 +52,14 @@ The resources can be accessed via the `$api` object. All the methods invocations
     $param['trandata'] = $encripted_result['content']['apiResponse'];
     $result = $api->payment->createPayment($param);
 
+     //STC Pay Create Payment
+    $stcParm = array('Customer' =>array('Name'=>'Dharmraj Kumhar', 'Email'=>'developers.wdp@gmail.com'),'DirectPaymentAuthorizeV4RequestMessage' =>array('MobileNo'=>'966557877988','Amount'=>'11','MerchantNote'=>'STC Payment'));
+    $encripted_result = $api->encryptDecrypt->create($stcParm, $secret_key, 'encrypt');  
+    // Payment API
+    //Alwase send $param['trandata'] in encrypted string
+    $param['trandata'] = $encripted_result['content']['apiResponse'];
+    $result = $api->payment->stcPay($param);
+
     //If you want to use our checkout page please follow these instructions
     //Create Payment
     $paymentParm = array('customer_name'=>'Raj', 'customer_email'=>'raj2022@example.com', 'amount'=>'100', 'currency'=>'SAR', 'remark'=>'This payment is done by card');
