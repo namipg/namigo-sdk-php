@@ -1,6 +1,6 @@
 {
-   "name":"psp-sdk/psp-sdk-php",
-   "description":"PSP PHP Payment SDK",
+   "name":"namigo-sdk/namigo-sdk-php",
+   "description":"Namigo PHP Payment SDK",
    "keywords":[
       "namipay",
       "api",
@@ -9,14 +9,14 @@
    ],
    "authors":[
       {
-         "name":"Dharmraj Kumhar",
-         "email":"developers.wdp@gmail.com",
+         "name":"dev",
+         "email":"support_pg@finappa.com",
          "homepage":"https://go.namipay.com.sa/",
          "role":"Developer"
       }
    ],
    "support":{
-      "email":"info@digitalworld.com.sa"
+      "email":"support_pg@finappa.com"
    },
    "homepage":"https://go.namipay.com.sa/",
    "license":"MIT",
