@@ -1,6 +1,6 @@
 <?php
 
-namespace Omnipay\Api;
+namespace Namipay\Api;
 
 use ArrayAccess;
 use ArrayIterator;

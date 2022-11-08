@@ -1,4 +1,4 @@
-# omnipay-php
+# namipay-php
 
 ### Prerequisites
 - A minimum of PHP 5.3 is required
@@ -12,24 +12,24 @@
 composer require psp-sdk/psp-sdk-php
 ```
 
-- If you are not using composer, download the latest release from [the releases section](https://github.com/aniljmk/psp-sdk-php/releases).
+- If you are not using composer, download the latest release from [the releases section](https://github.com/namipg/namigo-sdk-php).
     **You should download the `psp-sdk-php-master.zip` file**.
-    After that, include `Omnipay.php` in your application and you can use the API as usual.
+    After that, include `Namipay.php` in your application and you can use the API as usual.
     
 ##Note:
 This PHP library follows the following practices:
 
-- Namespaced under `Omnipay\Api`
+- Namespaced under `Namipay\Api`
 - API throws exceptions instead of returning errors
 - Options are passed as an array instead of multiple arguments wherever possible
 - All requests and responses are communicated over JSON
 
 ## Basic Usage
 
-Instantiate the omnipay php instance with `user_name ` , `password` & secret_key(These will be different for Test and Live). You can obtain the keys from the dashboard app ([https://psp.digitalworld.com.sa/user-api-keys](https://psp.digitalworld.com.sa/user-api-keys))
+Instantiate the namipay php instance with `user_name ` , `password` & secret_key(These will be different for Test and Live). You can obtain the keys from the dashboard app ([https://go.namipay.com.sa/user-api-keys](https://go.namipay.com.sa/user-api-keys))
 
 ```php
-use Omnipay\Api\Api;
+use Namipay\Api\Api;
 
 $secret_key = 'dCtLbk5FYVFGMVYrbFNGZTdEdzVpbSt3TFlYOC9NczNLaDZ0ZFo1WHcwVT0=';
 $api_user_name = 'psp_test.eaohcfml.ZWFvaGNmbWw=';
@@ -60,11 +60,6 @@ The resources can be accessed via the `$api` object. All the methods invocations
     $param['trandata'] = $encripted_result['content']['apiResponse'];
     $result = $api->payment->stcPay($param);
 
-    //If you want to use our checkout page please follow these instructions
-    //Create Payment
-    $paymentParm = array('customer_name'=>'Raj', 'customer_email'=>'raj2022@example.com', 'amount'=>'100', 'currency'=>'SAR', 'remark'=>'This payment is done by card');
-    $checkout = $api->payment->checkout($paymentParm);
-    
     //Refund Transaction
     $refundParm = array('transaction' =>array('id'=>'nt8my581z620365207292e','amount'=>'1', 'currency' => 'SAR'), 'remark'=>array('description'=>'Refund transaction'));
     $encripted_result = $api->encryptDecrypt->create($refundParm, $secret_key, 'encrypt');
@@ -97,4 +92,4 @@ The resources can be accessed via the `$api` object. All the methods invocations
 
 ## License
 
-The Omnipay PHP SDK is released under the MIT License. See [LICENSE](LICENSE) file for more details.
+The Namipay PHP SDK is released under the MIT License. See [LICENSE](LICENSE) file for more details.

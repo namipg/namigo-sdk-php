@@ -1,12 +1,12 @@
 <?php
 
-namespace Omnipay\Api\Test;
+namespace Namipay\Api\Test;
 
-include 'Omnipay.php';
+include 'Namipay.php';
 
-use Omnipay\Api\Api;
+use Namipay\Api\Api;
 
-class OmnipayTest extends \PHPUnit_Framework_TestCase
+class NamipayTest extends \PHPUnit_Framework_TestCase
 {
     function setUp()
     {
@@ -15,7 +15,7 @@ class OmnipayTest extends \PHPUnit_Framework_TestCase
 
     public function testApiAccess()
     {
-		$this->assertInstanceOf('Omnipay\Api\Api', $this->api);
+		$this->assertInstanceOf('Namipay\Api\Api', $this->api);
 	}
 
     public function testRequests()

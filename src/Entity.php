@@ -1,8 +1,8 @@
 <?php
 
-namespace Omnipay\Api;
+namespace Namipay\Api;
 
-use Omnipay\Api\Errors;
+use Namipay\Api\Errors;
 
 class Entity extends Resource implements ArrayableInterface
 {

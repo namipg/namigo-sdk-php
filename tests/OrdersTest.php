@@ -1,8 +1,8 @@
 <?php
 
-namespace Omnipay\Tests;
+namespace Namipay\Tests;
 
-use Omnipay\Api\Request;
+use Namipay\Api\Request;
 
 class OrdersTest extends TestCase
 {

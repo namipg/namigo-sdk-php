@@ -1,6 +1,6 @@
 <?php
 
-namespace Omnipay\Api\Errors;
+namespace Namipay\Api\Errors;
 
 class ServerError extends Error
 {

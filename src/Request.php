@@ -1,12 +1,12 @@
 <?php
 
-namespace Omnipay\Api;
+namespace Namipay\Api;
 
 use Requests;
 use Exception;
 use Requests_Hooks;
-use Omnipay\Api\Errors;
-use Omnipay\Api\Errors\ErrorCode;
+use Namipay\Api\Errors;
+use Namipay\Api\Errors\ErrorCode;
 
 
 // Available since PHP 5.5.19 and 5.6.3
@@ -26,7 +26,7 @@ class Request
      * @var array
      */
     protected static $headers = array(
-        'Omnipay-API'  =>  1    
+        'Namipay-API'  =>  1    
     );
 
     /**
@@ -167,7 +167,7 @@ class Request
 
     protected function constructUa()
     {
-        $ua = 'Omnipay/v1 PHPSDK/' . Api::VERSION . ' PHP/' . phpversion();
+        $ua = 'Namipay/v1 PHPSDK/' . Api::VERSION . ' PHP/' . phpversion();
 
         $ua .= ' ' . $this->getAppDetailsUa();
 
