@@ -9,7 +9,7 @@
 -   If your project using composer, run the below command
 
 ```
-composer require psp-sdk/psp-sdk-php
+composer require namigo-sdk/namigo-sdk-php
 ```
 
 - If you are not using composer, download the latest release from [the releases section](https://github.com/namipg/namigo-sdk-php).
