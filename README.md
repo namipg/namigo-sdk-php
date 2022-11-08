@@ -1,4 +1,4 @@
-# namipay-php
+# Nami-Go-php
 
 ### Prerequisites
 - A minimum of PHP 5.3 is required
@@ -9,7 +9,7 @@
 -   If your project using composer, run the below command
 
 ```
-composer require namigo-sdk/namigo-sdk-php
+composer require psp-sdk/psp-sdk-php
 ```
 
 - If you are not using composer, download the latest release from [the releases section](https://github.com/namipg/namigo-sdk-php).
@@ -92,4 +92,4 @@ The resources can be accessed via the `$api` object. All the methods invocations
 
 ## License
 
-The Namipay PHP SDK is released under the MIT License. See [LICENSE](LICENSE) file for more details.
+The Namigo PHP SDK is released under the MIT License. See [LICENSE](LICENSE) file for more details.
